@@ -220,3 +220,15 @@ textarea {
   clip: rect(0 0 0);
   overflow: hidden;
 }
+
+body {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#5964F6), color-stop(#8E7EF3), to(#BCA2FA));
+  background-image: linear-gradient(#5964F6, #8E7EF3, #BCA2FA);
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+h1 {
+  font-family: "Zilla Slab", serif;
+  font-size: 30px;
+}
