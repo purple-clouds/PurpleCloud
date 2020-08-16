@@ -5,11 +5,14 @@ const BodyParser = require('body-parser')
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
-
+const dotenv = require('dotenv');
 const indexRouter = require('./routes/index');
 const numbersRouter = require('./routes/numbers');
+dotenv.config()
 
 const app = express();
+
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/purple-cloud');
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -42,8 +45,8 @@ app.use(function (err, req, res, next) {
   res.render('error');
 });
 
-app.listen(3000, () => {
-  console.log('listening at :3000')
+app.listen(process.env.PORT, () => {
+  console.log('listening at :', process.env.PORT)
 })
 
 module.exports = app;
