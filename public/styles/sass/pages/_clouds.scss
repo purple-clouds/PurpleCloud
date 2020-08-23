@@ -1,1 +1,35 @@
 // page where clouds live
+
+.cloudContainer {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+
+.cloudOne::before {
+    content : '';
+    height: 100px; 
+    width: 100px; 
+    background-color: $clouds;
+    border-radius: 50%;
+    display: block; 
+}
+
+// Ro is going to look over before and after elements for the clouds https://medium.com/@jenthorn_/how-to-make-a-hexagon-in-css-8ee61d5ebae5 ! 
+
+
+.cloudTwo {
+    height: 100px; 
+    width: 100px; 
+    background-color: $clouds;
+    border-radius: 50%;
+}
+
+.cloudThree {
+    height: 100px; 
+    width: 100px; 
+    background-color: $clouds;
+    border-radius: 50%;
+}
