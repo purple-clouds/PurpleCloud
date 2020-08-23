@@ -6,20 +6,16 @@ const mongoose = require('mongoose');
 const countrySchema = new mongoose.Schema({
   country: String,
   numbers: [
-    Number
+    String
   ],
   websites: [
     String
-  ] 
+  ],
 })
 
 const countryModel = mongoose.model('country', countrySchema)
 
-/* GET users listing. */
-// router.get('/', function(req, res, next) {
-//   res.send('respond with a resource');
-// });
-
+/* GET country listing. */
 router.post('/', async (req, res) => {
   try {
     let country = new countryModel(req.body);
@@ -38,5 +34,8 @@ router.get('/', async (req, res) => {
     res.status(500).send(err);
   }
 })
+
+// todo: create update conditional for post if country exists
+
 
 module.exports = router;
