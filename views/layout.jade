@@ -5,3 +5,24 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     block content
+
+script.
+  const form = document.getElementById('database');
+  const country = document.getElementById('country');
+  const number = document.getElementById('number');
+  const website = document.getElementById('website')
+  form.addEventListener('submit', (e) => {
+    //- e.preventDefault()
+    //- fetch('/api/country', {
+    //-   method: 'POST',
+    //-   body: JSON.stringify({
+    //-     country,
+    //-     numbers: number,
+    //-     websites: website,
+    //-   })
+    //- }).then(data => {
+    //-   console.log(data)
+    //- }).catch(err => {
+    //-   console.log(err)
+    //- })
+  })

@@ -2,4 +2,15 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to the #{title}
+  form(action="/api/country", method="post" id="database")
+    label(for="country") country: 
+    input(type="text" name="country" id="country" required)
+    
+    label(for="number") number: 
+    input(type="text" name="number" id="number")
+
+    label(for="number") website: 
+    input(type="text" name="website" id="website")
+
+    button(type="submit") submit

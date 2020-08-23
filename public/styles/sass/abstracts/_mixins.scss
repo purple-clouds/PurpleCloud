@@ -10,5 +10,5 @@
      }
      @else if $class == xl {
           @media (max-width: 1200px) { @content; }
-    }
+     }
 }
